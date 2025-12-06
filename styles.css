@@ -280,22 +280,31 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
+    background: transparent;
+    position: relative;
+    z-index: 1;
 }
 
 .brand-section {
     display: flex;
     align-items: center;
     gap: 1rem;
+    background: transparent !important;
+    padding: 0 !important;
 }
 
 .brand-logo {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     border-radius: 8px;
+    background: transparent !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .brand-info {
@@ -2744,8 +2753,8 @@ section.active {
     }
     
     .brand-logo {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
     
     .mobile-whatsapp-btn {
