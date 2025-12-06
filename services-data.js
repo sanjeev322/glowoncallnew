@@ -185,6 +185,35 @@ const servicesData = {
         }
     ],
     
+    'other-services': [
+        {
+            id: 'microblading',
+            name: 'Microblading',
+            description: 'Semi-permanent eyebrow enhancement technique that creates natural-looking, hair-like strokes.',
+            originalPrice: 7000,
+            discountedPrice: 6000,
+            duration: 120,
+            image: 'assets/other service/microblading.jpg',
+            category: 'other-services',
+            benefits: ['Natural look', 'Semi-permanent', 'Fills sparse brows', 'Long-lasting 1-3 years'],
+            procedure: 'Consultation → Design → Numbing → Microblading → Aftercare',
+            idealFor: 'Sparse eyebrows, loss of brow hair, those wanting perfect brows'
+        },
+        {
+            id: 'lip-blush',
+            name: 'Lip Blush',
+            description: 'Semi-permanent lip tinting treatment that enhances natural lip color with a beautiful blush effect.',
+            originalPrice: 7000,
+            discountedPrice: 6000,
+            duration: 90,
+            image: 'assets/other service/Lip blush.jpg',
+            category: 'other-services',
+            benefits: ['Natural flush', 'Semi-permanent', 'Defined lips', 'Lasts 1-3 years'],
+            procedure: 'Consultation → Color selection → Numbing → Application → Aftercare',
+            idealFor: 'Pale lips, lips lacking definition, those wanting a natural lip tint'
+        }
+    ],
+    
     combos: [
         {
             id: 'combo-hydra-classic-derma',
@@ -251,6 +280,17 @@ const servicesData = {
             image: 'assets/facial/Korean Glass Skin Facial.avif',
             category: 'combos',
             services: ['Korean Glass Skin Facial', 'Classic Lash Extension', 'Dermaplaning']
+        },
+        {
+            id: 'combo-microblading-lip-blush',
+            name: 'Microblading + Lip Blush (Combo)',
+            description: 'Complete semi-permanent makeup package combining perfect eyebrows with beautiful lip tinting.',
+            originalPrice: 14000,
+            discountedPrice: 9999,
+            duration: 210,
+            image: 'assets/other service/microblading.jpg',
+            category: 'combos',
+            services: ['Microblading', 'Lip Blush']
         }
     ]
    
@@ -265,6 +305,7 @@ function searchServices(query) {
         ...servicesData.facials, 
         ...servicesData['lash-extensions'], 
         ...servicesData.eyebrows, 
+        ...servicesData['other-services'],
         ...servicesData.addons, 
         ...servicesData.combos,
         ...servicesData.waxing,
