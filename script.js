@@ -21,7 +21,10 @@ const availableServices = [
     'brow-tint',
     'eyebrow-lamination',
     'products',
-    'hybrid-lash'
+    'hybrid-lash',
+    'microblading',
+    'lip-blush',
+    'combo-microblading-lip-blush'
 ];
 
 // Function to check if a service is available
@@ -208,6 +211,7 @@ function populateServiceSections() {
     populateServiceCategory('facials');
     populateServiceCategory('lash-extensions');
     populateServiceCategory('eyebrows');
+    populateServiceCategory('other-services');
     populateServiceCategory('combos');
 }
 
