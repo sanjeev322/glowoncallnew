@@ -381,6 +381,25 @@
                             <img src="assets/Eyebrow Treatments.jpeg" alt="Eyebrow Services" />
                         </div>
                     </div>
+                    
+                    <div class="service-category-card" onclick="showCategory('other-services')">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-wand-magic-sparkles"></i>
+                            </div>
+                        </div>
+                        <div class="category-content">
+                            <h3>Other Services</h3>
+                            <p>Semi-permanent beauty treatments for lasting enhancements</p>
+                            <div class="category-features">
+                                <span class="feature-tag">Microblading</span>
+                                <span class="feature-tag">Lip Blush</span>
+                            </div>
+                        </div>
+                        <div class="category-image">
+                            <img src="assets/other service/microblading.jpg" alt="Other Services" />
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -405,6 +424,10 @@
                         <button class="modern-filter-btn" data-category="eyebrows">
                             <i class="fas fa-paint-brush"></i>
                             <span>Eyebrows</span>
+                        </button>
+                        <button class="modern-filter-btn" data-category="other-services">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                            <span>Other Services</span>
                         </button>
                         <button class="modern-filter-btn" data-category="combos">
                             <i class="fas fa-crown"></i>
@@ -720,6 +743,13 @@
                     <p>Eyebrows</p>
                 </div>
                 
+                <div class="category-card" onclick="showCategory('other-services')">
+                    <div class="category-icon">
+                        <img src="assets/other service/microblading.jpg" alt="Other Services" />
+                    </div>
+                    <p>Other Services</p>
+                </div>
+                
             </div>
         </section>
 
@@ -752,6 +782,16 @@
                 <h1>Eyebrow Treatments</h1>
             </div>
             <div id="eyebrows-content" class="services-list"></div>
+        </section>
+
+        <section id="other-services" class="service-category-section">
+            <div class="page-header">
+                <button class="back-btn" onclick="showSection('categories')">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1>Other Services</h1>
+            </div>
+            <div id="other-services-content" class="services-list"></div>
         </section>
 
         <section id="combos" class="service-category-section">
