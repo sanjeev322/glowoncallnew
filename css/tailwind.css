@@ -1,0 +1,375 @@
+/* GlowOnCall - Wellness Authority Design System */
+/* Generated: 2026-01-09 */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors - Clean Canvas */
+    --color-primary: #FFFFFF; /* white */
+    --color-primary-50: #FAFAFA; /* gray-50 */
+    --color-primary-100: #F8F9FA; /* gray-100 */
+    
+    /* Secondary Colors - Professional Authority */
+    --color-secondary: #1A1A1A; /* gray-900 */
+    --color-secondary-700: #2C3E50; /* slate-700 */
+    --color-secondary-500: #7F8C8D; /* gray-500 */
+    
+    /* Accent Colors - Trust & Wellness */
+    --color-accent: #2ECC71; /* green-500 */
+    --color-accent-600: #27AE60; /* green-600 */
+    --color-accent-light: #A8E6CF; /* green-200 */
+    
+    /* CTA Colors - Confident Action */
+    --color-cta: #E74C3C; /* red-500 */
+    --color-cta-dark: #C0392B; /* red-700 */
+    --color-cta-light: #F39C12; /* orange-500 */
+    
+    /* Background Colors */
+    --color-background: #FAFAFA; /* gray-50 */
+    --color-surface: #F8F9FA; /* gray-100 */
+    --color-card: #FFFFFF; /* white */
+    
+    /* Text Colors */
+    --color-text-primary: #2C3E50; /* slate-700 */
+    --color-text-secondary: #7F8C8D; /* gray-500 */
+    --color-text-inverse: #FFFFFF; /* white */
+    
+    /* State Colors */
+    --color-success: #27AE60; /* green-600 */
+    --color-warning: #F39C12; /* orange-500 */
+    --color-error: #C0392B; /* red-700 */
+    
+    /* Border Colors */
+    --color-border: #E8E8E8; /* gray-200 */
+    --color-border-light: #F0F0F0; /* gray-100 */
+    
+    /* Shadow Values */
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-modal: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 6px 24px rgba(0, 0, 0, 0.10);
+    
+    /* Spacing Scale */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+    
+    /* Transitions */
+    --transition-fast: 200ms ease-out;
+    --transition-base: 300ms ease-out;
+    --transition-slow: 400ms ease-out;
+    --transition-stagger: 100ms;
+  }
+  
+  /* Base Typography */
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: var(--color-secondary);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+  }
+  
+  h3 {
+    font-size: 1.875rem;
+    font-weight: 600;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  h6 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Selection Styling */
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-text-inverse);
+  }
+}
+
+@layer components {
+  /* Button Components */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-montserrat font-semibold text-white bg-cta hover:bg-cta-dark transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-montserrat font-medium text-secondary bg-white border-2 border-secondary hover:bg-secondary hover:text-white transition-all duration-300;
+  }
+  
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-montserrat font-semibold text-white bg-accent hover:bg-accent-dark transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+  
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-montserrat font-medium text-secondary hover:bg-surface transition-all duration-300;
+  }
+  
+  /* Card Components */
+  .card {
+    @apply bg-white rounded-xl p-6 shadow-card hover:shadow-hover transition-shadow duration-300;
+  }
+  
+  .card-service {
+    @apply bg-white rounded-xl overflow-hidden shadow-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1;
+  }
+  
+  .card-testimonial {
+    @apply bg-surface rounded-xl p-8 shadow-card font-cormorant italic;
+  }
+  
+  /* Input Components */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-border bg-white text-text-primary placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300;
+  }
+  
+  .input-error {
+    @apply border-error focus:ring-error;
+  }
+  
+  .input-success {
+    @apply border-success focus:ring-success;
+  }
+  
+  /* Badge Components */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-montserrat font-medium;
+  }
+  
+  .badge-success {
+    @apply bg-accent text-white;
+  }
+  
+  .badge-warning {
+    @apply bg-warning text-white;
+  }
+  
+  .badge-error {
+    @apply bg-error text-white;
+  }
+  
+  /* Container Components */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  /* Text Styles */
+  .text-heading {
+    @apply font-playfair font-semibold text-secondary;
+  }
+  
+  .text-body {
+    @apply font-source text-text-primary;
+  }
+  
+  .text-accent-style {
+    @apply font-cormorant italic text-text-secondary;
+  }
+  
+  /* Animation Classes */
+  .fade-in {
+    animation: fadeIn 300ms ease-out forwards;
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 400ms ease-out forwards;
+  }
+  
+  .stagger-delay-1 {
+    animation-delay: 100ms;
+  }
+  
+  .stagger-delay-2 {
+    animation-delay: 200ms;
+  }
+  
+  .stagger-delay-3 {
+    animation-delay: 300ms;
+  }
+  
+  /* Modal Components */
+  .modal-overlay {
+    @apply fixed inset-0 bg-secondary bg-opacity-50 backdrop-blur-sm z-40 transition-opacity duration-300;
+  }
+.modal-content  {
+    @apply bg-white rounded-xl shadow-modal max-w-2xl w-full mx-4 transform transition-all;
+  }
+  
+  /* Divider */
+  .divider {
+    @apply border-t border-border my-8;
+  }
+  
+  /* Link Styles */
+  .link-primary {
+    @apply text-accent hover:text-accent-dark underline-offset-4 hover:underline transition-colors duration-300;
+  }
+  
+  .link-secondary {
+    @apply text-text-secondary hover:text-text-primary transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  /* Custom Shadows */
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-modal {
+    box-shadow: var(--shadow-modal);
+  }
+  
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+  
+  /* Gradient Overlays */
+  .gradient-overlay {
+    @apply relative before:absolute before:inset-0 before:bg-gradient-to-t before:from-secondary before:to-transparent before:opacity-60;
+  }
+  
+  /* Aspect Ratios */
+  .aspect-service {
+    @apply aspect-[4/3];
+  }
+  
+  .aspect-hero {
+    @apply aspect-[16/9];
+  }
+  
+  /* Scrollbar Styling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Text Truncation */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.875rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

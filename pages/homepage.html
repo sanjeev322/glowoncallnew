@@ -7,7 +7,7 @@
     <meta name="description"
         content="GlowOnCall - Premium doorstep beauty services. Professional salon-quality treatments in the comfort of your home. Book now for facials, lash extensions, eyebrows, and more.">
     <title>GlowOnCall - Premium Doorstep Beauty Services | Professional Home Beauty Treatments</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <script type="module" async
         src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fglowoncall2063back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.12"></script>
@@ -31,13 +31,13 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/pages/homepage.html"
+                    <a href="homepage.html"
                         class="text-accent font-semibold hover:text-accent-dark transition-colors duration-300">Home</a>
-                    <a href="/pages/services.html"
+                    <a href="services.html"
                         class="text-text-primary hover:text-accent transition-colors duration-300">Services</a>
-                    <a href="/pages/cart.html"
+                    <a href="cart.html"
                         class="text-text-primary hover:text-accent transition-colors duration-300">Cart</a>
-                    <a href="/pages/contact.html"
+                    <a href="contact.html"
                         class="text-text-primary hover:text-accent transition-colors duration-300">Contact</a>
                 </div>
 
@@ -50,22 +50,23 @@
                 <!-- Mobile Menu Button -->
                 <button id="mobileMenuBtn"
                     class="md:hidden p-2 rounded-lg hover:bg-surface transition-colors duration-300">
-                    <img src="/assets/glowoncall_logo.jpg.png" alt="Open mobile menu" class="w-6 h-6">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1baceeaf9-1764698072227.png"
+                        alt="Open mobile menu" class="w-6 h-6">
                 </button>
             </div>
 
             <!-- Mobile Navigation -->
             <div id="mobileMenu" class="hidden md:hidden pb-4 space-y-3">
-                <a href="/pages/homepage.html" class="block py-2 text-accent font-semibold">Home</a>
-                <a href="/pages/services.html"
+                <a href="homepage.html" class="block py-2 text-accent font-semibold">Home</a>
+                <a href="services.html"
                     class="block py-2 text-text-primary hover:text-accent transition-colors duration-300">Services</a>
-                <a href="/pages/cart.html"
+                <a href="cart.html"
                     class="block py-2 text-text-primary hover:text-accent transition-colors duration-300">Cart</a>
-                <a href="/pages/contact.html"
+                <a href="contact.html"
                     class="block py-2 text-text-primary hover:text-accent transition-colors duration-300">Contact</a>
                 <div class="pt-3 space-y-2">
-                    <a href="/pages/services.html" class="btn-secondary w-full text-center text-sm">Browse Services</a>
-                    <a href="/pages/cart.html" class="btn-primary w-full text-center text-sm">Book Now</a>
+                    <a href="services.html" class="btn-secondary w-full text-center text-sm">Browse Services</a>
+                    <a href="cart.html" class="btn-primary w-full text-center text-sm">Book Now</a>
                 </div>
             </div>
         </nav>
@@ -88,7 +89,8 @@
             <div class="max-w-3xl">
                 <div
                     class="inline-flex items-center space-x-2 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 animate-fade-in">
-                    <img src="/assets/glowoncall_logo.jpg.png" alt="Premium service indicator" class="w-5 h-5">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_15675aba0-1766833680828.png"
+                        alt="Premium service indicator" class="w-5 h-5">
                     <span class="text-accent font-montserrat font-semibold text-sm">Premium Doorstep Beauty
                         Services</span>
                 </div>
@@ -146,30 +148,6 @@
     </section>
 
     <!-- Social Proof Counter -->
-    <section class="bg-white py-12 shadow-soft">
-        <div class="container-custom">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-display-2 font-playfair font-bold text-accent mb-2">15,000+</div>
-                    <div class="text-text-secondary text-sm font-medium">Happy Customers</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-display-2 font-playfair font-bold text-accent mb-2">50+</div>
-                    <div class="text-text-secondary text-sm font-medium">Expert Beauticians</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-display-2 font-playfair font-bold text-accent mb-2">25+</div>
-                    <div class="text-text-secondary text-sm font-medium">Premium Services</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-display-2 font-playfair font-bold text-accent mb-2">12</div>
-                    <div class="text-text-secondary text-sm font-medium">Cities Covered</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Services Carousel -->
     <section class="section-padding bg-surface">
         <div class="container-custom">
             <div class="text-center mb-12">
@@ -186,8 +164,7 @@
                 <div class="card-service-mobile md:card-service group cursor-pointer"
                     onclick="setCategoryFilterAndGo('facial')">
                     <div class="relative aspect-square md:aspect-service overflow-hidden rounded-xl md:rounded-none">
-                        <img src="/assets/facial.jpg"
-                            alt="Professional facial treatment with natural products and expert techniques"
+                        <img src="/assets/facial.jpg" alt="Professional facial treatment"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             onerror="this.src='/assets/facial.jpg'; this.onerror=null;">
                         <div
@@ -201,6 +178,12 @@
                             Facial Treatments</h3>
                         <p class="hidden md:block text-body-base text-text-secondary">Rejuvenate your skin with our
                             expert facial services</p>
+                        <div class="hidden md:flex items-center justify-between">
+                            <span class="text-accent font-semibold text-lg">Starting at ₹999</span>
+                            <img src="https://api.iconify.design/heroicons/chevron-right-20-solid.svg?color=%232ecc71"
+                                alt="View services"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300">
+                        </div>
                     </div>
                 </div>
 
@@ -208,7 +191,7 @@
                 <div class="card-service-mobile md:card-service group cursor-pointer"
                     onclick="setCategoryFilterAndGo('lash')">
                     <div class="relative aspect-square md:aspect-service overflow-hidden rounded-xl md:rounded-none">
-                        <img src="/assets/lash.png" alt="Premium lash extension application by certified beautician"
+                        <img src="/assets/lash.png" alt="Premium lash extensions"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             onerror="this.src='/assets/lash.png'; this.onerror=null;">
                         <div
@@ -220,8 +203,14 @@
                         <h3
                             class="text-mobile-sm md:text-heading-2 text-secondary mb-1 md:mb-2 group-hover:text-accent transition-colors duration-300 font-medium md:font-semibold">
                             Lash Extensions</h3>
-                        <p class="hidden md:block text-body-base text-text-secondary">Enhance your eyes with premium
-                            lash extensions</p>
+                        <p class="hidden md:block text-body-base text-text-secondary">Enhance your eyes with
+                            premium lash extensions</p>
+                        <div class="hidden md:flex items-center justify-between">
+                            <span class="text-accent font-semibold text-lg">Starting at ₹1,499</span>
+                            <img src="https://api.iconify.design/heroicons/chevron-right-20-solid.svg?color=%232ecc71"
+                                alt="View services"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300">
+                        </div>
                     </div>
                 </div>
 
@@ -229,8 +218,7 @@
                 <div class="card-service-mobile md:card-service group cursor-pointer"
                     onclick="setCategoryFilterAndGo('eyebrow')">
                     <div class="relative aspect-square md:aspect-service overflow-hidden rounded-xl md:rounded-none">
-                        <img src="/assets/Eyebrow Treatments.jpeg"
-                            alt="Professional eyebrow shaping and tinting service"
+                        <img src="/assets/Eyebrow Treatments.jpeg" alt="Eyebrow styling"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             onerror="this.src='/assets/Eyebrow Treatments.jpeg'; this.onerror=null;">
                         <div
@@ -242,8 +230,14 @@
                         <h3
                             class="text-mobile-sm md:text-heading-2 text-secondary mb-1 md:mb-2 group-hover:text-accent transition-colors duration-300 font-medium md:font-semibold">
                             Eyebrow Styling</h3>
-                        <p class="hidden md:block text-body-base text-text-secondary">Perfect your brows with expert
-                            shaping and tinting</p>
+                        <p class="hidden md:block text-body-base text-text-secondary">Perfect your brows with
+                            expert shaping and tinting</p>
+                        <div class="hidden md:flex items-center justify-between">
+                            <span class="text-accent font-semibold text-lg">Starting at ₹499</span>
+                            <img src="https://api.iconify.design/heroicons/chevron-right-20-solid.svg?color=%232ecc71"
+                                alt="View services"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300">
+                        </div>
                     </div>
                 </div>
 
@@ -251,7 +245,7 @@
                 <div class="card-service-mobile md:card-service group cursor-pointer"
                     onclick="setCategoryFilterAndGo('hair')">
                     <div class="relative aspect-square md:aspect-service overflow-hidden rounded-xl md:rounded-none">
-                        <img src="/assets/hair treatment.jpg" alt="Professional hair styling and treatment at home"
+                        <img src="/assets/hair treatment.jpg" alt="Hair treatments"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             onerror="this.src='/assets/hair treatment.jpg'; this.onerror=null;">
                         <div
@@ -265,6 +259,12 @@
                             Hair Treatments</h3>
                         <p class="hidden md:block text-body-base text-text-secondary">Transform your hair with
                             professional styling</p>
+                        <div class="hidden md:flex items-center justify-between">
+                            <span class="text-accent font-semibold text-lg">Starting at ₹799</span>
+                            <img src="https://api.iconify.design/heroicons/chevron-right-20-solid.svg?color=%232ecc71"
+                                alt="View services"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300">
+                        </div>
                     </div>
                 </div>
 
@@ -272,7 +272,7 @@
                 <div class="card-service-mobile md:card-service group cursor-pointer"
                     onclick="setCategoryFilterAndGo('waxing')">
                     <div class="relative aspect-square md:aspect-service overflow-hidden rounded-xl md:rounded-none">
-                        <img src="/assets/waxing.png" alt="Professional waxing service"
+                        <img src="/assets/waxing.png" alt="Waxing service"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             onerror="this.src='/assets/waxing.png'; this.onerror=null;">
                         <div
@@ -284,8 +284,14 @@
                         <h3
                             class="text-mobile-sm md:text-heading-2 text-secondary mb-1 md:mb-2 group-hover:text-accent transition-colors duration-300 font-medium md:font-semibold">
                             Waxing</h3>
-                        <p class="hidden md:block text-body-base text-text-secondary">Professional waxing treatments for
-                            smooth skin</p>
+                        <p class="hidden md:block text-body-base text-text-secondary">Professional waxing
+                            treatments for smooth skin</p>
+                        <div class="hidden md:flex items-center justify-between">
+                            <span class="text-accent font-semibold text-lg">Starting at ₹699</span>
+                            <img src="https://api.iconify.design/heroicons/chevron-right-20-solid.svg?color=%232ecc71"
+                                alt="View services"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300">
+                        </div>
                     </div>
                 </div>
 
@@ -293,7 +299,7 @@
                 <div class="card-service-mobile md:card-service group cursor-pointer"
                     onclick="setCategoryFilterAndGo('cleanup-detan')">
                     <div class="relative aspect-square md:aspect-service overflow-hidden rounded-xl md:rounded-none">
-                        <img src="/assets/clean detan.png" alt="Professional cleanup and detan treatment"
+                        <img src="/assets/clean detan.png" alt="Cleanup and detan treatment"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             onerror="this.src='/assets/clean detan.png'; this.onerror=null;">
                         <div
@@ -305,15 +311,21 @@
                         <h3
                             class="text-mobile-sm md:text-heading-2 text-secondary mb-1 md:mb-2 group-hover:text-accent transition-colors duration-300 font-medium md:font-semibold">
                             Cleanup & Detan</h3>
-                        <p class="hidden md:block text-body-base text-text-secondary">Remove tan and deeply cleanse your
-                            skin</p>
+                        <p class="hidden md:block text-body-base text-text-secondary">Remove tan and deeply cleanse
+                            your skin</p>
+                        <div class="hidden md:flex items-center justify-between">
+                            <span class="text-accent font-semibold text-lg">Starting at ₹1,999</span>
+                            <img src="https://api.iconify.design/heroicons/chevron-right-20-solid.svg?color=%232ecc71"
+                                alt="View services"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300">
+                        </div>
                     </div>
                 </div>
                 <!-- Mani Pedi -->
                 <div class="card-service-mobile md:card-service group cursor-pointer"
                     onclick="setCategoryFilterAndGo('mani-pedi')">
                     <div class="relative aspect-square md:aspect-service overflow-hidden rounded-xl md:rounded-none">
-                        <img src="/assets/mani pedi.png" alt="Professional manicure and pedicure service"
+                        <img src="/assets/mani pedi.png" alt="Manicure and pedicure"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             onerror="this.src='/assets/mani pedi.png'; this.onerror=null;">
                     </div>
@@ -321,8 +333,14 @@
                         <h3
                             class="text-mobile-sm md:text-heading-2 text-secondary mb-1 md:mb-2 group-hover:text-accent transition-colors duration-300 font-medium md:font-semibold">
                             Mani Pedi</h3>
-                        <p class="hidden md:block text-body-base text-text-secondary">Luxury care for your hands and
-                            feet</p>
+                        <p class="hidden md:block text-body-base text-text-secondary">Luxury care for your hands
+                            and feet</p>
+                        <div class="hidden md:flex items-center justify-between">
+                            <span class="text-accent font-semibold text-lg">Starting at ₹1,999</span>
+                            <img src="https://api.iconify.design/heroicons/chevron-right-20-solid.svg?color=%232ecc71"
+                                alt="View services"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300">
+                        </div>
                     </div>
                 </div>
 
@@ -330,7 +348,7 @@
                 <div class="card-service-mobile md:card-service group cursor-pointer"
                     onclick="setCategoryFilterAndGo('other-services')">
                     <div class="relative aspect-square md:aspect-service overflow-hidden rounded-xl md:rounded-none">
-                        <img src="/assets/combo.jpg" alt="Various other premium beauty services"
+                        <img src="/assets/combo.jpg" alt="Other services"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             onerror="this.src='/assets/combo.jpg'; this.onerror=null;">
                     </div>
@@ -338,15 +356,21 @@
                         <h3
                             class="text-mobile-sm md:text-heading-2 text-secondary mb-1 md:mb-2 group-hover:text-accent transition-colors duration-300 font-medium md:font-semibold">
                             Other Services</h3>
-                        <p class="hidden md:block text-body-base text-text-secondary">Explore our various other beauty
-                            packages</p>
+                        <p class="hidden md:block text-body-base text-text-secondary">Explore our various other
+                            beauty packages</p>
+                        <div class="hidden md:flex items-center justify-between">
+                            <span class="text-accent font-semibold text-lg">Starting at ₹1,999</span>
+                            <img src="https://api.iconify.design/heroicons/chevron-right-20-solid.svg?color=%232ecc71"
+                                alt="View services"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300">
+                        </div>
                     </div>
                 </div>
 
                 <div class="card-service-mobile md:card-service group cursor-pointer"
                     onclick="setCategoryFilterAndGo('spa-at-home')">
                     <div class="relative aspect-square md:aspect-service overflow-hidden rounded-xl md:rounded-none">
-                        <img src="/assets/spa at home.png" alt="Luxury spa treatments at your home"
+                        <img src="/assets/spa at home.png" alt="Spa at home"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             onerror="this.src='/assets/spa at home.png'; this.onerror=null;">
                     </div>
@@ -354,8 +378,14 @@
                         <h3
                             class="text-mobile-sm md:text-heading-2 text-secondary mb-1 md:mb-2 group-hover:text-accent transition-colors duration-300 font-medium md:font-semibold">
                             Spa at Home</h3>
-                        <p class="hidden md:block text-body-base text-text-secondary">Professional spa experience in
-                            your personal space</p>
+                        <p class="hidden md:block text-body-base text-text-secondary">Professional spa experience
+                            in your personal space</p>
+                        <div class="hidden md:flex items-center justify-between">
+                            <span class="text-accent font-semibold text-lg">Starting at ₹1,999</span>
+                            <img src="https://api.iconify.design/heroicons/chevron-right-20-solid.svg?color=%232ecc71"
+                                alt="View services"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -369,6 +399,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Customer Transformation Gallery -->
     <section class="section-padding bg-white">
@@ -385,7 +416,7 @@
                 <div class="card-mobile md:card group cursor-pointer">
                     <div class="relative aspect-square overflow-hidden rounded-xl md:rounded-lg mb-2 md:mb-4">
                         <img src="https://img.rocket.new/generatedImages/rocket_gen_img_120659458-1766620388332.png"
-                            alt="Before and after facial treatment"
+                            alt="Before and after facial"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
                         <div
@@ -459,7 +490,7 @@
                     </div>
                     <div class="text-center md:text-left">
                         <h4
-                            class="text-[10px] leading-tight md:text-heading-3 text-secondary mb-1 md:mb-2 font-medium md:font-semibold">
+                            class="text-mobile-sm md:text-heading-3 text-secondary mb-1 md:mb-2 font-medium md:font-semibold">
                             Bridal Glam Package</h4>
                         <p class="hidden md:block text-body-sm text-text-secondary mb-3">Neha S. - Bangalore</p>
                         <div class="hidden md:flex items-center space-x-1 mb-3">
@@ -822,7 +853,7 @@
             observer.observe(el);
         });
     </script>
-    <script id="dhws-dataInjector" src="public/dhws-data-injector.js"></script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
 </body>
 
 </html>

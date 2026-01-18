@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse GlowOnCall's premium beauty services - Facials, Lash Extensions, Eyebrows, Hair Treatments, Nail Care & Makeup. Professional doorstep beauty services with certified experts.">
+    <title>Premium Beauty Services | GlowOnCall - Professional Doorstep Beauty Treatments</title>
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script type="module" async
+        src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fglowoncall2063back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.12"></script>
+    <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+</head>
+
+<body class="font-source text-text-primary bg-background">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-soft z-sticky">
+        <nav class="container-custom">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <a href="homepage.html" class="flex items-center space-x-3">
+                    <img src="/assets/glowoncall_logo.jpg.png"
+                        alt="GlowOnCall logo featuring elegant feminine silhouette in gold tones"
+                        class="h-12 w-12 object-cover rounded-full"
+                        onerror="this.src='/assets/glowoncall_logo.jpg.png'; this.onerror=null;">
+                    <span class="font-playfair text-2xl font-bold text-secondary">GlowOnCall</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html"
+                        class="text-text-primary hover:text-accent transition-colors duration-300">Home</a>
+                    <a href="services.html"
+                        class="text-accent font-semibold hover:text-accent-dark transition-colors duration-300">Services</a>
+                    <a href="cart.html"
+                        class="text-text-primary hover:text-accent transition-colors duration-300">Cart</a>
+                    <a href="contact.html"
+                        class="text-text-primary hover:text-accent transition-colors duration-300">Contact</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="cart.html" class="relative">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1e9800c8c-1764650951315.png"
+                            alt="Shopping cart icon" class="w-6 h-6">
+                        <span id="cartCount"
+                            class="absolute -top-2 -right-2 bg-cta text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </a>
+                    <a href="cart.html" class="btn-primary text-sm">Book Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn"
+                    class="md:hidden p-2 rounded-lg hover:bg-surface transition-colors duration-300">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1baceeaf9-1764698072227.png"
+                        alt="Open mobile menu" class="w-6 h-6">
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4 space-y-3">
+                <a href="homepage.html"
+                    class="block py-2 text-text-primary hover:text-accent transition-colors duration-300">Home</a>
+                <a href="services.html" class="block py-2 text-accent font-semibold">Services</a>
+                <a href="cart.html"
+                    class="block py-2 text-text-primary hover:text-accent transition-colors duration-300">Cart</a>
+                <a href="contact.html"
+                    class="block py-2 text-text-primary hover:text-accent transition-colors duration-300">Contact</a>
+                <div class="pt-3">
+                    <a href="cart.html" class="btn-primary w-full text-center text-sm">Book Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Search -->
+    <section class="relative pt-32 pb-16 bg-gradient-to-br from-surface via-white to-accent-light/20">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <div
+                    class="inline-flex items-center space-x-2 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 animate-fade-in">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1894db645-1766609858388.png"
+                        alt="Premium services indicator" class="w-5 h-5">
+                    <span class="text-accent font-montserrat font-semibold text-sm">25+ Premium Services
+                        Available</span>
+                </div>
+
+                <h1 class="text-display-1 md:text-6xl text-secondary mb-6 animate-fade-in-up">
+                    Discover Your Perfect<br>
+                    <span class="text-accent">Beauty Experience</span>
+                </h1>
+
+                <p class="text-body-lg text-text-secondary mb-8 animate-fade-in-up stagger-delay-1">
+                    Professional salon-quality treatments delivered to your doorstep by certified beauticians
+                </p>
+
+                <!-- Search & Filter Bar -->
+                <div class="bg-white rounded-xl shadow-card p-4 animate-fade-in-up stagger-delay-2">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="flex-1 relative">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_194eeb027-1764656322629.png"
+                                alt="Search icon" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5">
+                            <input type="text" id="searchInput"
+                                placeholder="Search services (e.g., facial, lash extensions...)"
+                                class="input-field pl-12 w-full">
+                        </div>
+                        <button id="filterBtn" class="btn-secondary whitespace-nowrap">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1562a99eb-1767824827665.png"
+                                alt="Filter icon" class="w-5 h-5 mr-2">
+                            Filters
+                        </button>
+                        <button id="resetBtn" class="btn-ghost whitespace-nowrap">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1565d94f2-1764648755125.png"
+                                alt="Reset filters icon" class="w-5 h-5 mr-2">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Category Pills -->
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <button class="category-pill active" data-category="all">All Services</button>
+                <button class="category-pill" data-category="facial">Facials</button>
+                <button class="category-pill" data-category="lash">Lash Extensions</button>
+                <button class="category-pill" data-category="eyebrow">Eyebrows</button>
+                <button class="category-pill" data-category="hair">Hair Treatments</button>
+                <button class="category-pill" data-category="nail">Nail Care</button>
+                <button class="category-pill" data-category="makeup">Makeup</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Modal -->
+    <div id="filterModal" class="hidden fixed inset-0 z-modal">
+        <div class="modal-overlay" id="filterOverlay"></div>
+        <div class="fixed inset-0 flex items-center justify-center p-4 z-modal">
+            <div class="modal-content max-w-2xl p-8 animate-scale-in">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-heading-2 text-secondary">Filter Services</h3>
+                    <button id="closeFilterModal"
+                        class="p-2 hover:bg-surface rounded-lg transition-colors duration-300">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1df37886c-1766836036006.png"
+                            alt="Close filter modal" class="w-6 h-6">
+                    </button>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Price Range -->
+                    <div>
+                        <label class="block text-heading-3 text-secondary mb-3">Price Range</label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-body-sm text-text-secondary mb-1 block">Min Price (₹)</label>
+                                <input type="number" id="minPrice" placeholder="0" class="input-field">
+                            </div>
+                            <div>
+                                <label class="text-body-sm text-text-secondary mb-1 block">Max Price (₹)</label>
+                                <input type="number" id="maxPrice" placeholder="5000" class="input-field">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duration -->
+                    <div>
+                        <label class="block text-heading-3 text-secondary mb-3">Duration</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="30" class="duration-filter">
+                                <span>30 min</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="60" class="duration-filter">
+                                <span>1 hour</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="90" class="duration-filter">
+                                <span>1.5 hours</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="120" class="duration-filter">
+                                <span>2+ hours</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Beautician Experience -->
+                    <div>
+                        <label class="block text-heading-3 text-secondary mb-3">Beautician Experience</label>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="junior" class="experience-filter">
+                                <span>Junior (1-2 years)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="senior" class="experience-filter">
+                                <span>Senior (3-5 years)</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="expert" class="experience-filter">
+                                <span>Expert (5+ years)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 mt-8">
+                    <button id="applyFilters" class="btn-primary flex-1">Apply Filters</button>
+                    <button id="clearFilters" class="btn-ghost flex-1">Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Grid Section -->
+    <section class="section-padding">
+        <div class="container-custom">
+            <!-- Results Header -->
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-heading-2 text-secondary mb-2">Available Services</h2>
+                    <p class="text-body-base text-text-secondary">
+                        <span id="resultsCount">25</span> services found
+                    </p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <label class="text-body-sm text-text-secondary">Sort by:</label>
+                    <select id="sortSelect" class="input-field py-2 px-4 w-auto">
+                        <option value="popular">Most Popular</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="duration">Duration</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Services Grid -->
+            <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-6">
+                <!-- Service cards will be dynamically inserted here -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="hidden text-center py-16">
+                <img src="https://img.rocket.new/generatedImages/rocket_gen_img_18785e0ee-1767260729382.png"
+                    alt="No results found icon" class="w-16 h-16 mx-auto mb-4 opacity-50">
+                <h3 class="text-heading-2 text-secondary mb-2">No Services Found</h3>
+                <p class="text-body-base text-text-secondary mb-6">Try adjusting your filters or search terms</p>
+                <button id="resetFromNoResults" class="btn-primary">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail Modal -->
+    <div id="serviceModal" class="hidden fixed inset-0 z-modal">
+        <div class="modal-overlay" id="serviceOverlay"></div>
+        <div class="fixed inset-0 overflow-y-auto z-modal">
+            <div class="flex items-center justify-center min-h-screen p-4">
+                <div class="modal-content max-w-4xl w-full animate-scale-in">
+                    <div id="serviceModalContent">
+                        <!-- Service details will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Combo Packages Section -->
+    <section class="section-padding bg-surface">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center space-x-2 bg-cta/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
+                    <img src="https://images.unsplash.com/photo-1601066964201-618c595bc954"
+                        alt="Special offer indicator" class="w-5 h-5">
+                    <span class="text-cta font-montserrat font-semibold text-sm">Save Up to 30%</span>
+                </div>
+                <h2 class="text-display-2 text-secondary mb-4">Combo Packages</h2>
+                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
+                    Get more value with our specially curated service combinations
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Combo Package 1 -->
+                <div class="card group cursor-pointer hover:shadow-hover transition-all duration-300">
+                    <div class="relative mb-4">
+                        <div
+                            class="absolute top-4 right-4 bg-cta text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                            Save ₹500
+                        </div>
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1078d49b7-1767987392698.png"
+                            alt="Radiant Glow combo package featuring facial treatment and eyebrow styling"
+                            class="w-full h-48 object-cover rounded-lg"
+                            onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                    </div>
+                    <h3
+                        class="text-heading-2 text-secondary mb-2 group-hover:text-accent transition-colors duration-300">
+                        Radiant Glow Combo</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">Facial Treatment + Eyebrow Styling + Upper Lip
+                        Threading</p>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-text-secondary line-through">₹1,998</span>
+                        <span class="text-heading-2 text-accent">₹1,498</span>
+                        <span class="badge badge-success text-xs">25% OFF</span>
+                    </div>
+                    <div class="flex items-center justify-between text-body-sm text-text-secondary mb-4">
+                        <div class="flex items-center space-x-1">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_146e3f98d-1764648747146.png"
+                                alt="Duration icon" class="w-4 h-4">
+                            <span>2 hours</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_184280168-1764677508307.png"
+                                alt="Rating icon" class="w-4 h-4">
+                            <span>4.9 (234 reviews)</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary w-full" onclick="addComboToCart('combo1')">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_131d341a0-1767080550287.png"
+                            alt="Add to cart icon" class="w-5 h-5 mr-2">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Combo Package 2 -->
+                <div class="card group cursor-pointer hover:shadow-hover transition-all duration-300">
+                    <div class="relative mb-4">
+                        <div
+                            class="absolute top-4 right-4 bg-cta text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                            Save ₹800
+                        </div>
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1a10e6154-1767987392931.png"
+                            alt="Glamour Package combo featuring lash extensions and makeup application"
+                            class="w-full h-48 object-cover rounded-lg"
+                            onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                    </div>
+                    <h3
+                        class="text-heading-2 text-secondary mb-2 group-hover:text-accent transition-colors duration-300">
+                        Glamour Package</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">Lash Extensions + Party Makeup + Hair Styling</p>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-text-secondary line-through">₹3,997</span>
+                        <span class="text-heading-2 text-accent">₹3,197</span>
+                        <span class="badge badge-success text-xs">20% OFF</span>
+                    </div>
+                    <div class="flex items-center justify-between text-body-sm text-text-secondary mb-4">
+                        <div class="flex items-center space-x-1">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_146e3f98d-1764648747146.png"
+                                alt="Duration icon" class="w-4 h-4">
+                            <span>3 hours</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_184280168-1764677508307.png"
+                                alt="Rating icon" class="w-4 h-4">
+                            <span>5.0 (189 reviews)</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary w-full" onclick="addComboToCart('combo2')">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_131d341a0-1767080550287.png"
+                            alt="Add to cart icon" class="w-5 h-5 mr-2">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Combo Package 3 -->
+                <div class="card group cursor-pointer hover:shadow-hover transition-all duration-300">
+                    <div class="relative mb-4">
+                        <div
+                            class="absolute top-4 right-4 bg-cta text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                            Save ₹600
+                        </div>
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1329711ca-1767987393041.png"
+                            alt="Pamper Session combo featuring manicure, pedicure and hair spa"
+                            class="w-full h-48 object-cover rounded-lg"
+                            onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                    </div>
+                    <h3
+                        class="text-heading-2 text-secondary mb-2 group-hover:text-accent transition-colors duration-300">
+                        Pamper Session</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">Manicure + Pedicure + Hair Spa Treatment</p>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-text-secondary line-through">₹2,597</span>
+                        <span class="text-heading-2 text-accent">₹1,997</span>
+                        <span class="badge badge-success text-xs">23% OFF</span>
+                    </div>
+                    <div class="flex items-center justify-between text-body-sm text-text-secondary mb-4">
+                        <div class="flex items-center space-x-1">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_146e3f98d-1764648747146.png"
+                                alt="Duration icon" class="w-4 h-4">
+                            <span>2.5 hours</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_184280168-1764677508307.png"
+                                alt="Rating icon" class="w-4 h-4">
+                            <span>4.8 (312 reviews)</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary w-full" onclick="addComboToCart('combo3')">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_131d341a0-1767080550287.png"
+                            alt="Add to cart icon" class="w-5 h-5 mr-2">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Gallery -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-display-2 text-secondary mb-4">Real Transformations</h2>
+                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
+                    See the stunning results our certified beauticians deliver
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group cursor-pointer">
+                    <div class="relative aspect-square overflow-hidden rounded-lg mb-3">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_120659458-1766620388332.png"
+                            alt="Before and after facial treatment showing radiant glowing skin transformation"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute top-3 left-3 bg-accent text-white px-2 py-1 rounded text-xs font-semibold">
+                            Facial Treatment
+                        </div>
+                    </div>
+                    <p class="text-body-sm text-text-secondary">Radiant Glow Facial</p>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="relative aspect-square overflow-hidden rounded-lg mb-3">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1ddbaa0cd-1764706399916.png"
+                            alt="Before and after lash extension showing dramatic eye enhancement"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute top-3 left-3 bg-accent text-white px-2 py-1 rounded text-xs font-semibold">
+                            Lash Extensions
+                        </div>
+                    </div>
+                    <p class="text-body-sm text-text-secondary">Volume Lash Extensions</p>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="relative aspect-square overflow-hidden rounded-lg mb-3">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1071ea223-1764682598363.png"
+                            alt="Before and after eyebrow shaping showing perfectly sculpted brows"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute top-3 left-3 bg-accent text-white px-2 py-1 rounded text-xs font-semibold">
+                            Eyebrow Styling
+                        </div>
+                    </div>
+                    <p class="text-body-sm text-text-secondary">Microblading & Tinting</p>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="relative aspect-square overflow-hidden rounded-lg mb-3">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1934b1ff0-1766841778074.png"
+                            alt="Before and after bridal makeup showing elegant wedding look transformation"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <div class="absolute top-3 left-3 bg-accent text-white px-2 py-1 rounded text-xs font-semibold">
+                            Bridal Makeup
+                        </div>
+                    </div>
+                    <p class="text-body-sm text-text-secondary">Bridal Glam Package</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beauty Tips Section -->
+    <section class="section-padding bg-gradient-to-br from-accent-light/20 to-surface">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-display-2 text-secondary mb-4">Beauty Tips & Guides</h2>
+                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
+                    Expert advice from our certified beauticians
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card group cursor-pointer">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_17da7ef04-1764636840427.png"
+                        alt="Skincare routine guide showing various beauty products and application techniques"
+                        class="w-full h-48 object-cover rounded-lg mb-4"
+                        onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                    <div class="badge badge-success mb-3">Skincare</div>
+                    <h3
+                        class="text-heading-3 text-secondary mb-2 group-hover:text-accent transition-colors duration-300">
+                        Complete Skincare Routine Guide</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">Learn the essential steps for healthy, glowing skin
+                        from our experts</p>
+                    <a href="javascript:void(0)" class="link-primary text-sm font-semibold">
+                        Read More
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1b74fd344-1767642460385.png"
+                            alt="Read more arrow" class="w-4 h-4 inline ml-1">
+                    </a>
+                </div>
+
+                <div class="card group cursor-pointer">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1c3d1e7cb-1767987390869.png"
+                        alt="Makeup application tips showing professional techniques and product selection"
+                        class="w-full h-48 object-cover rounded-lg mb-4"
+                        onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                    <div class="badge badge-success mb-3">Makeup</div>
+                    <h3
+                        class="text-heading-3 text-secondary mb-2 group-hover:text-accent transition-colors duration-300">
+                        Makeup Tips for Every Occasion</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">Master the art of makeup application with
+                        professional techniques</p>
+                    <a href="javascript:void(0)" class="link-primary text-sm font-semibold">
+                        Read More
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1b74fd344-1767642460385.png"
+                            alt="Read more arrow" class="w-4 h-4 inline ml-1">
+                    </a>
+                </div>
+
+                <div class="card group cursor-pointer">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_19c0f4122-1767987392909.png"
+                        alt="Hair care guide showing treatment methods and styling techniques"
+                        class="w-full h-48 object-cover rounded-lg mb-4"
+                        onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                    <div class="badge badge-success mb-3">Hair Care</div>
+                    <h3
+                        class="text-heading-3 text-secondary mb-2 group-hover:text-accent transition-colors duration-300">
+                        Hair Care Secrets Revealed</h3>
+                    <p class="text-body-sm text-text-secondary mb-4">Discover professional hair care tips for lustrous,
+                        healthy hair</p>
+                    <a href="javascript:void(0)" class="link-primary text-sm font-semibold">
+                        Read More
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1b74fd344-1767642460385.png"
+                            alt="Read more arrow" class="w-4 h-4 inline ml-1">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-gradient-to-r from-accent to-accent-dark text-white">
+        <div class="container-custom text-center">
+            <h2 class="text-display-2 mb-4">Ready to Book Your Service?</h2>
+            <p class="text-body-lg mb-8 max-w-2xl mx-auto opacity-90">
+                Experience professional beauty treatments in the comfort of your home
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="cart.html" class="btn-primary bg-white text-accent hover:bg-primary-50 text-lg px-8 py-4">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_16f1fb4d8-1766874081065.png"
+                        alt="View cart icon" class="w-5 h-5 mr-2">
+                    View Cart
+                </a>
+                <a href="contact.html"
+                    class="btn-secondary border-white text-white hover:bg-white hover:text-accent text-lg px-8 py-4">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1bf69a0a6-1767987399456.png"
+                        alt="Contact us icon" class="w-5 h-5 mr-2">
+                    Need Help?
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_14acbbdbe-1767987392435.png"
+                            alt="GlowOnCall footer logo" class="h-10 w-10 object-cover rounded-full"
+                            onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                        <span class="font-playfair text-xl font-bold">GlowOnCall</span>
+                    </div>
+                    <p class="text-white/70 text-sm mb-4">Professional beauty, personal space. Your glow, our expertise,
+                        your comfort.</p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)"
+                            class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-300">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1b9a5f070-1766967796860.png"
+                                alt="Facebook social link" class="w-4 h-4">
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-300">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1c4de2559-1764678949635.png"
+                                alt="Instagram social link" class="w-4 h-4">
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-300">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1cdcf5959-1767195262423.png"
+                                alt="Twitter social link" class="w-4 h-4">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html"
+                                class="text-white/70 hover:text-accent transition-colors duration-300">Home</a></li>
+                        <li><a href="services.html"
+                                class="text-white/70 hover:text-accent transition-colors duration-300">Services</a></li>
+                        <li><a href="cart.html"
+                                class="text-white/70 hover:text-accent transition-colors duration-300">Cart</a></li>
+                        <li><a href="contact.html"
+                                class="text-white/70 hover:text-accent transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Popular Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html"
+                                class="text-white/70 hover:text-accent transition-colors duration-300">Facial
+                                Treatments</a></li>
+                        <li><a href="services.html"
+                                class="text-white/70 hover:text-accent transition-colors duration-300">Lash
+                                Extensions</a></li>
+                        <li><a href="services.html"
+                                class="text-white/70 hover:text-accent transition-colors duration-300">Eyebrow
+                                Styling</a></li>
+                        <li><a href="services.html"
+                                class="text-white/70 hover:text-accent transition-colors duration-300">Bridal
+                                Packages</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-2">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_19794a246-1767085016252.png"
+                                alt="Phone icon" class="w-5 h-5 mt-0.5">
+                            <span class="text-white/70 text-sm">+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1175352d5-1767644430280.png"
+                                alt="Email icon" class="w-5 h-5 mt-0.5">
+                            <span class="text-white/70 text-sm">hello@glowoncall.com</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_11407ebac-1766822096581.png"
+                                alt="Location icon" class="w-5 h-5 mt-0.5">
+                            <span class="text-white/70 text-sm">Serving 12+ cities across India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-white/70 text-sm">© 2026 GlowOnCall. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Button -->
+    <button id="liveChatBtn"
+        class="fixed bottom-6 right-6 w-14 h-14 bg-accent hover:bg-accent-dark rounded-full shadow-modal flex items-center justify-center z-fixed transition-all duration-300 hover:scale-110">
+        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1f8a0bc58-1766811948246.png"
+            alt="Live chat support" class="w-6 h-6">
+    </button>
+
+    <style>
+        .category-pill {
+            @apply px-4 py-2 rounded-full text-sm font-montserrat font-medium bg-white text-text-primary border border-border hover:border-accent hover:text-accent transition-all duration-300 cursor-pointer;
+        }
+
+        .category-pill.active {
+            @apply bg-accent text-white border-accent;
+        }
+
+        .filter-checkbox {
+            @apply flex items-center space-x-2 p-3 rounded-lg border border-border hover:border-accent cursor-pointer transition-all duration-300;
+        }
+
+        .filter-checkbox input[type="checkbox"] {
+            @apply w-5 h-5 text-accent border-border rounded focus:ring-accent focus:ring-2;
+        }
+
+        .filter-checkbox:has(input:checked) {
+            @apply border-accent bg-accent/5;
+        }
+    </style>
+
+    <script>
+        // Mock Services Data
+        const servicesData = [
+
+
+            {
+                id: 1,
+                name: "HydraFacial",
+                category: "facial",
+                price: 1999,
+                duration: 60,
+                rating: 4.9,
+                reviews: 234,
+                image: '../assets/facial/HydraFacial.png',
+                description: "Deep cleansing, exfoliation, and hydration treatment for all skin types. Includes extraction and serum infusion for instant glow.",
+                benefits: ['Deep hydration', 'Removes blackheads', 'Instant glow', 'Non-invasive'],
+                experience: "senior",
+                popular: true
+            },
+            {
+                id: 2,
+                name: "Collagen Renewal Facial",
+                category: "facial",
+                price: 2999,
+                duration: 75,
+                rating: 5.0,
+                reviews: 189,
+                image: '../assets/facial/Collagen Renewal Facial.jpg',
+                description: 'Anti-aging treatment that stimulates collagen production. Reduces fine lines and improves skin elasticity.',
+                benefits: ['Reduces fine lines', 'Firms skin', 'Boosts collagen', 'Anti-aging'],
+                experience: "expert",
+                popular: true
+            },
+            {
+                id: 3,
+                name: "Microblading & Tinting",
+                category: "facial",
+                price: 2399,
+                duration: 90,
+                rating: 4.8,
+                reviews: 156,
+                image: '../assets/facial/istockphoto-1254805067-612x612.jpg',
+                description: 'Brightening treatment with vitamin C serum. Perfect for dull skin and pigmentation concerns.',
+                benefits: ['Brightens skin', 'Reduces dark spots', 'Antioxidant protection', 'Even skin tone'],
+                experience: "senior",
+                popular: false
+            },
+            {
+                id: 4,
+                name: "Charcoal Detox Facial",
+                category: "facial",
+                price: 2599,
+                duration: 120,
+                rating: 4.7,
+                reviews: 198,
+                image: '../assets/facial/Charcoal Detox Facial.jpg',
+                description: 'Deep pore cleansing treatment with activated charcoal. Perfect for oily and acne-prone skin.',
+                benefits: ['Deep pore cleansing', 'Removes toxins', 'Controls oil', 'Purifies skin'],
+                experience: "expert",
+                popular: true
+            },
+            {
+                id: 5,
+                name: "Golden Glow Facial",
+                category: "facial",
+                price: 2699,
+                duration: 60,
+                rating: 4.9,
+                reviews: 267,
+                image: '../assets/facial/Golden Glow Facial.jpg',
+                description: 'Luxurious gold-infused facial treatment. Provides instant radiance and anti-aging benefits.',
+                benefits: ['Luxurious experience', 'Anti-aging', 'Radiant glow', 'Improves circulation'],
+                experience: "senior",
+                popular: false
+            },
+            {
+                id: 6,
+                name: "Dermaplaning Facial",
+                category: "facial",
+                price: 799,
+                duration: 180,
+                rating: 5.0,
+                reviews: 145,
+                image: '../assets/facial/Dermaplaning.jpg',
+                description: 'Gentle exfoliation treatment that removes dead skin cells and fine facial hair for smoother skin. Can be added to any facial.',
+                benefits: ['Smooth skin', 'Better product absorption', 'Removes peach fuzz', 'Instant results'],
+                experience: "expert",
+                popular: true
+            },
+            {
+                id: 7,
+                name: "Korean Glass Skin Facial",
+                category: "facial",
+                price: 2499,
+                duration: 75,
+                rating: 4.8,
+                reviews: 178,
+                image: '../assets/facial/Korean Glass Skin Facial.avif',
+                description: 'Multi-step Korean skincare treatment for glass-like skin finish. Includes double cleansing, exfoliation, and hydration.',
+                benefits: ['Glass-like glow', 'Deep hydration', 'Poreless appearance', 'Dewy finish'],
+                experience: "expert",
+                popular: false
+            },
+            {
+                id: 8,
+                name: "Classic Lash Extension",
+                category: "lash",
+                price: 1999,
+                duration: 90,
+                rating: 4.9,
+                reviews: 223,
+                image: '../assets/Lash/Classic Lash Extension.webp',
+                description: 'Natural-looking lash extensions with 1:1 ratio. Perfect for everyday wear and subtle enhancement.',
+                benefits: ['Natural look', 'Long-lasting', 'Waterproof', 'No mascara needed'],
+                experience: "senior",
+                popular: true
+            },
+            {
+                id: 9,
+                name: "Hybrid Lash Extension",
+                category: "lash",
+                price: 2499,
+                duration: 30,
+                rating: 4.7,
+                reviews: 312,
+                image: '../assets/Lash/Hybrid Lash Extension.webp',
+                description: 'Combination of classic and volume techniques. Offers more fullness while maintaining natural look.',
+                benefits: ['Fuller lashes', 'Natural + glamorous', 'Customizable density', 'Long-lasting'],
+                experience: "junior",
+                popular: false
+            },
+            {
+                id: 10,
+                name: "Lash Lift",
+                category: "lash",
+                price: 1500,
+                duration: 90,
+                rating: 4.8,
+                reviews: 189,
+                image: '../assets/Lash/Lash Lift.jpg',
+                description: 'Natural lash enhancement that lifts and curls your existing lashes. Lasts 6-8 weeks.',
+                benefits: ['Natural enhancement', 'Low maintenance', 'No extensions needed', 'Curl lasts 6-8 weeks'],
+                experience: "senior",
+                popular: false
+            },
+            {
+                id: 11,
+                name: "Eyebrow Tint",
+                category: "eyebrow",
+                price: 500,
+                duration: 75,
+                rating: 4.9,
+                reviews: 245,
+                image: '../assets/Eyebrows/Eyebrow Tint.webp',
+                description: 'Professional eyebrow tinting service to enhance and define your brows.',
+                benefits: ['Enhanced definition', 'Long-lasting color', 'Natural look', 'Fills sparse areas'],
+                experience: "senior",
+                popular: true
+            },
+            {
+                id: 12,
+                name: "Eyebrow Lamination",
+                category: "eyebrow",
+                price: 1499,
+                duration: 90,
+                rating: 4.8,
+                reviews: 167,
+                image: '../assets/Eyebrows/Eyebrow Lamination.jpg',
+                description: 'Semi-permanent treatment that creates fuller, more defined eyebrows by setting the hairs in place.',
+                benefits: ['Fuller appearance', 'Lasts 6-8 weeks', 'Tames unruly hairs', 'Low maintenance'],
+                experience: "senior",
+                popular: false
+            },
+            {
+                id: 13,
+                name: "Full Arms + Underarms",
+                category: "waxing",
+                price: 649,
+                duration: 90,
+                rating: 5.0,
+                reviews: 134,
+                image: "../assets/waxing/Underarm Waxing.png",
+                description: 'Complete waxing for arms and underarms.', benefits: ["Instant glow", "Anti-aging", "Skin firming", "Luxury treatment"],
+                benefits: ["Instant glow", "Anti-aging", "Skin firming", "Luxury treatment"],
+                experience: "expert",
+                popular: true
+            },
+            {
+                id: 14,
+                name: "Full Legs Waxing",
+                category: "waxing",
+                price: 1349,
+                duration: 105,
+                rating: 4.9,
+                reviews: 201,
+                image: "../assets/waxing/leg waxing.png",
+                description: 'Smooth waxing for both legs.',
+                benefits: ["Balanced volume", "Natural-dramatic mix", "Lasts 4-5 weeks", "Versatile style"],
+                experience: "expert",
+                popular: false
+            },
+            {
+                id: 15,
+                name: "Bikini Line Perfection",
+                category: "waxing",
+                price: 449,
+                duration: 60,
+                rating: 4.8,
+                reviews: 178,
+                image: "../assets/waxing/Bikini Line Waxing.png",
+                description: 'Gentle waxing for the bikini line area.',
+                benefits: ["Fuller appearance", "Lasts 6-8 weeks", "Low maintenance", "Natural look"],
+                experience: "senior",
+                popular: true
+            },
+            {
+                id: 16,
+                name: "Upper Lip/Chin",
+                category: "waxing",
+                price: 99,
+                duration: 150,
+                rating: 4.7,
+                reviews: 156,
+                image: "../assets/waxing/Chin waxing.png",
+                description: 'Quick waxing for upper lip or chin.',
+                benefits: ["Vibrant color", "Long-lasting", "Hair-safe formula", "Custom shades"],
+                experience: "expert",
+                popular: false
+            },
+            {
+                id: 17,
+                name: "Professional eyebrow shaping with wax.",
+                category: "waxing",
+                price: 149,
+                duration: 120,
+                rating: 4.8,
+                reviews: 189,
+                image: '../assets/waxing/Eyebrow Shaping.png',
+                description: 'Professional eyebrow shaping with wax.', benefits: ["Long-lasting", "Custom designs", "Durable", "Nail strengthening"],
+                experience: "expert",
+                popular: false
+            },
+            {
+                id: 18,
+                name: "Essential Clean-Up",
+                category: "cleanup-detan",
+                price: 599,
+                duration: 120,
+                rating: 5.0,
+                reviews: 123,
+                image: '../assets/clean detan/Essential Clean-Up.png',
+                description: 'Basic skin clean-up for a fresh look.', benefits: ["HD finish", "Long-lasting", "Lightweight", "Waterproof"],
+                experience: "expert",
+                popular: true
+            },
+            {
+                id: 19,
+                name: "Sun-Kissed Skin Detan",
+                category: "cleanup-detan",
+                price: 799,
+                duration: 60,
+                rating: 4.7,
+                reviews: 198,
+                image: '../assets/clean detan/Sun-Kissed Skin Detan.png',
+                description: 'Detan treatment for sun-exposed skin.',
+                benefits: ["Natural ingredients", "Skin brightening", "Vitamin boost", "Refreshing"],
+                experience: "junior",
+                popular: false
+            },
+            {
+                id: 20,
+                name: "Express Manicure",
+                category: "mani-pedi",
+                price: 349,
+                duration: 60,
+                rating: 4.9,
+                reviews: 234,
+                image: '../assets/mani pedi/Express Manicure.png',
+                description: 'Quick manicure for neat nails.',
+                benefits: ["Natural curl", "Lasts 6-8 weeks", "Low maintenance", "No extensions needed"],
+                experience: "senior",
+                popular: true
+            },
+            {
+                id: 21,
+                name: "Luxury Pedicure",
+                category: "mani-pedi",
+                price: 1099,
+                duration: 45,
+                rating: 4.8,
+                reviews: 267,
+                image: '../assets/mani pedi/Luxury Pedicure.png',
+                description: "Pampering pedicure with luxury products.",
+                benefits: ["Smooth skin", "Long-lasting", "Gentle method", "Precise removal"],
+                experience: "senior",
+                popular: false
+            },
+            {
+                id: 22,
+                name: "Signature Hair Spa",
+                category: "hair",
+                price: 1199,
+                duration: 150,
+                rating: 4.8,
+                reviews: 178,
+                image: '../assets/hair/Signature Hair Spa.png',
+                description: 'Relaxing hair spa for nourishment.', benefits: ["Silky texture", "Frizz control", "Lasts 4-5 months", "Easy styling"],
+                experience: "expert",
+                popular: false
+            },
+            {
+                id: 23,
+                name: "Anti-Hairfall Therapy",
+                category: "hair",
+                price: 1499,
+                duration: 90,
+                rating: 4.9,
+                reviews: 223,
+                image: '../assets/hair/Anti-Hairfall Therapy.png',
+                description: 'Therapy to reduce hair fall and strengthen roots.', benefits: ["Custom designs", "Long-lasting", "Creative patterns", "Premium quality"],
+                experience: "senior",
+                popular: true
+            },
+            {
+                id: 24,
+                name: "Head & Shoulder Bliss",
+                category: "spa-at-home",
+                price: 599,
+                duration: 75,
+                rating: 4.8,
+                reviews: 189,
+                image: '../assets/spa/Head & Shoulder Massage.png',
+                description: 'Relaxing head and shoulder massage.', benefits: ["Natural finish", "Long-lasting", "Skin-friendly", "Professional look"],
+                experience: "junior",
+                popular: false
+            },
+            {
+                id: 25,
+                name: "Full Body Harmony",
+                category: "spa-at-home",
+                price: 1799,
+                duration: 90,
+                rating: 5.0,
+                reviews: 145,
+                image: "../assets/spa/Full Body Massage.png",
+                description: "Full body massage for complete relaxation.",
+                benefits: ["Instant radiance", "Anti-aging", "Luxury treatment", "Deep cleansing"],
+                experience: "expert",
+                popular: true
+            },
+            {
+                id: 26,
+                name: 'Microblading',
+                description: 'Semi-permanent eyebrow enhancement technique that creates natural-looking, hair-like strokes.',
+                price: 6000,
+                duration: 120,
+                image: '../assets/other service/microblading.jpg',
+                category: 'other-services',
+                benefits: ['Natural look', 'Semi-permanent', 'Fills sparse brows', 'Long-lasting 1-3 years'],
+                experience: "expert",
+                popular: true
+            },
+            {
+                id: 27,
+                name: 'Lip Blush',
+                description: 'Semi-permanent lip tinting treatment that enhances natural lip color with a beautiful blush effect.',
+                price: 6000,
+                duration: 90,
+                image: '../Hair & Scalp Revivalassets/other service/Lip blush.jpg',
+                category: 'other-services',
+                benefits: ['Natural flush', 'Semi-permanent', 'Defined lips', 'Lasts 1-3 years'],
+                experience: "expert",
+                popular: true
+            }
+        ];
+
+        // State Management
+        let categoryFilter = localStorage.getItem('serviceCategoryFilter');
+        let filteredServices = categoryFilter
+            ? servicesData.filter(s => s.category === categoryFilter)
+            : [...servicesData];
+        let currentCategory = categoryFilter || 'all';
+        if (categoryFilter) localStorage.removeItem('serviceCategoryFilter');
+        let cart = JSON.parse(localStorage.getItem('glowoncall_cart')) || [];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function () {
+            renderServices(filteredServices);
+            updateCartCount();
+            setupEventListeners();
+        });
+
+        // Event Listeners Setup
+        function setupEventListeners() {
+            // Mobile menu
+            document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.toggle('hidden');
+            });
+
+            // Search
+            document.getElementById('searchInput').addEventListener('input', handleSearch);
+
+            // Category pills
+            document.querySelectorAll('.category-pill').forEach(pill => {
+                pill.addEventListener('click', () => handleCategoryChange(pill));
+            });
+
+            // Filter modal
+            document.getElementById('filterBtn').addEventListener('click', () => {
+                document.getElementById('filterModal').classList.remove('hidden');
+            });
+
+            document.getElementById('closeFilterModal').addEventListener('click', closeFilterModal);
+            document.getElementById('filterOverlay').addEventListener('click', closeFilterModal);
+            document.getElementById('applyFilters').addEventListener('click', applyFilters);
+            document.getElementById('clearFilters').addEventListener('click', clearFilters);
+
+            // Reset buttons
+            document.getElementById('resetBtn').addEventListener('click', resetFilters);
+            document.getElementById('resetFromNoResults').addEventListener('click', resetFilters);
+
+            // Sort
+            document.getElementById('sortSelect').addEventListener('change', handleSort);
+
+            // Service modal close
+            document.getElementById('serviceOverlay').addEventListener('click', closeServiceModal);
+
+            // Live chat
+            document.getElementById('liveChatBtn').addEventListener('click', () => {
+                window.open('https://wa.me/7892783668', '_blank');
+            });
+        }
+
+        // Render Services
+        function renderServices(services) {
+            const grid = document.getElementById('servicesGrid');
+            const noResults = document.getElementById('noResults');
+            const resultsCount = document.getElementById('resultsCount');
+
+            if (services.length === 0) {
+                grid.classList.add('hidden');
+                noResults.classList.remove('hidden');
+                resultsCount.textContent = '0';
+                return;
+            }
+
+            grid.classList.remove('hidden');
+            noResults.classList.add('hidden');
+            resultsCount.textContent = services.length;
+
+            grid.innerHTML = services.map(service => {
+                const cartItem = cart.find(item => item.id === service.id);
+                const quantity = cartItem ? cartItem.quantity : 0;
+
+                return `
+                <!-- Desktop Card View -->
+                <div class="hidden md:block h-full">
+                    <div class="card-service group cursor-pointer h-full" onclick="showServiceDetail(${service.id})">
+                        <div class="relative aspect-service overflow-hidden">
+                            <img src="${service.image}" 
+                                 alt="${service.name} - ${service.description}" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                 onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                            ${service.popular ? '<div class="absolute top-4 right-4 bg-cta text-white px-3 py-1 rounded-full text-sm font-semibold">Popular</div>' : ''}
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-heading-2 text-secondary mb-2 group-hover:text-accent transition-colors duration-300 font-semibold">${service.name}</h3>
+                            <p class="text-body-sm text-text-secondary mb-4 line-clamp-2">${service.description}</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-heading-2 text-accent">₹${service.price.toLocaleString('en-IN')}</span>
+                                <div class="flex items-center space-x-1">
+                                    <img src="https://api.iconify.design/heroicons/star-solid.svg?color=%23F39C12" alt="Rating star" class="w-4 h-4">
+                                    <span class="text-body-sm text-text-secondary">${service.rating} (${service.reviews})</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between text-body-sm text-text-secondary mb-4">
+                                <div class="flex items-center space-x-1">
+                                    <img src="https://api.iconify.design/heroicons/clock.svg?color=%237F8C8D" alt="Duration icon" class="w-4 h-4">
+                                    <span>${service.duration} min</span>
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <img src="https://api.iconify.design/heroicons/academic-cap.svg?color=%237F8C8D" alt="Experience level icon" class="w-4 h-4">
+                                    <span class="capitalize">${service.experience}</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary w-full" onclick="event.stopPropagation(); addToCart(${service.id})">
+                                <img src="https://api.iconify.design/heroicons/shopping-cart.svg?color=%23FFFFFF" alt="Add to cart icon" class="w-5 h-5 mr-2">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile List View -->
+                <div class="md:hidden">
+                    <div class="service-list-item" onclick="showServiceDetail(${service.id})">
+                        <div class="content">
+                            <h3 class="text-base font-bold text-secondary mb-1">${service.name}</h3>
+                            <div class="flex items-center space-x-2 mb-1">
+                                <div class="flex items-center bg-green-50 px-1.5 py-0.5 rounded text-[10px] font-bold text-green-700">
+                                    <img src="https://api.iconify.design/heroicons/star-solid.svg?color=%2315803d" class="w-2.5 h-2.5 mr-0.5">
+                                    ${service.rating} (${service.reviews > 1000 ? (service.reviews / 1000).toFixed(1) + 'K' : service.reviews})
+                                </div>
+                            </div>
+                            <div class="text-sm font-bold text-text-primary mb-1">Starts at ₹${service.price.toLocaleString('en-IN')}</div>
+                            <p class="text-xs text-text-secondary line-clamp-2 mb-2 leading-relaxed">${service.description}</p>
+                            <button class="text-[#6D28D9] text-[11px] font-bold" onclick="event.stopPropagation(); showServiceDetail(${service.id})">View details</button>
+                        </div>
+                        <div class="image-container">
+                            <img src="${service.image}" alt="${service.name}" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';">
+                            <div class="add-btn-container">
+                                ${quantity > 0 ? `
+                                    <div class="flex items-center justify-between w-full bg-white border border-[#6D28D9] shadow-md py-1 px-1.5 rounded-lg text-[#6D28D9] font-bold text-sm">
+                                        <button class="px-1 text-lg active:scale-125 transition-transform" onclick="event.stopPropagation(); removeFromCart(${service.id})">−</button>
+                                        <span>${quantity}</span>
+                                        <button class="px-1 text-lg active:scale-125 transition-transform" onclick="event.stopPropagation(); addToCart(${service.id})">+</button>
+                                    </div>
+                                ` : `
+                                    <button class="w-full bg-white border border-gray-200 shadow-md py-1.5 rounded-lg text-[#6D28D9] font-bold text-xs uppercase hover:bg-gray-50 active:bg-gray-100 transition-all" 
+                                            onclick="event.stopPropagation(); addToCart(${service.id})">
+                                        Add
+                                    </button>
+                                `}
+                                <div class="text-[9px] text-center text-text-secondary mt-1">5 options</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            }).join('');
+        }
+
+        // Show Service Detail Modal
+        function showServiceDetail(serviceId) {
+            const service = servicesData.find(s => s.id === serviceId);
+            if (!service) return;
+
+            const modalContent = document.getElementById('serviceModalContent');
+            modalContent.innerHTML = `
+                <div class="relative">
+                    <button onclick="closeServiceModal()" class="absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-card hover:shadow-hover transition-all duration-300">
+                        <img src="https://api.iconify.design/heroicons/x-mark.svg?color=%231A1A1A" alt="Close modal" class="w-6 h-6">
+                    </button>
+                    
+                    <img src="${service.image}" 
+                         alt="${service.name} - detailed view" 
+                         class="w-full h-80 object-cover rounded-t-xl"
+                         onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;">
+                    
+                    <div class="p-8">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <h2 class="text-display-2 text-secondary mb-2">${service.name}</h2>
+                                <div class="flex items-center space-x-4 text-body-sm text-text-secondary">
+                                    <div class="flex items-center space-x-1">
+                                        <img src="https://api.iconify.design/heroicons/star-solid.svg?color=%23F39C12" alt="Rating star" class="w-5 h-5">
+                                        <span class="font-semibold">${service.rating}</span>
+                                        <span>(${service.reviews} reviews)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <img src="https://api.iconify.design/heroicons/clock.svg?color=%237F8C8D" alt="Duration icon" class="w-5 h-5">
+                                        <span>${service.duration} minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-display-2 text-accent">₹${service.price.toLocaleString('en-IN')}</div>
+                                <div class="text-body-sm text-text-secondary capitalize">${service.experience} beautician</div>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="mb-6">
+                            <h3 class="text-heading-2 text-secondary mb-3">Description</h3>
+                            <p class="text-body-base text-text-primary">${service.description}</p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-heading-2 text-secondary mb-3">Benefits</h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                ${service.benefits.map(benefit => `
+                                    <li class="flex items-center space-x-2">
+                                        <img src="https://api.iconify.design/heroicons/check-circle-solid.svg?color=%232ECC71" alt="Benefit checkmark" class="w-5 h-5">
+                                        <span class="text-body-base text-text-primary">${benefit}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="bg-surface rounded-lg p-6 mb-6">
+                            <h3 class="text-heading-3 text-secondary mb-3">What to Expect</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start space-x-3">
+                                    <img src="https://api.iconify.design/heroicons/home-modern.svg?color=%232ECC71" alt="Home service icon" class="w-6 h-6 mt-0.5">
+                                    <div>
+                                        <div class="font-semibold text-secondary">Doorstep Service</div>
+                                        <div class="text-body-sm text-text-secondary">Our certified beautician will arrive at your location with all necessary equipment</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <img src="https://api.iconify.design/heroicons/shield-check.svg?color=%232ECC71" alt="Hygiene icon" class="w-6 h-6 mt-0.5">
+                                    <div>
+                                        <div class="font-semibold text-secondary">100% Hygiene Standards</div>
+                                        <div class="text-body-sm text-text-secondary">All equipment is sanitized and we follow strict safety protocols</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <img src="https://api.iconify.design/heroicons/clock.svg?color=%232ECC71" alt="Timing icon" class="w-6 h-6 mt-0.5">
+                                    <div>
+                                        <div class="font-semibold text-secondary">Flexible Timing</div>
+                                        <div class="text-body-sm text-text-secondary">Book at your convenience, 7 days a week</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <button class="btn-primary flex-1 text-lg" onclick="addToCart(${service.id}); closeServiceModal();">
+                                <img src="https://api.iconify.design/heroicons/shopping-cart.svg?color=%23FFFFFF" alt="Add to cart icon" class="w-5 h-5 mr-2">
+                                Add to Cart
+                            </button>
+                            <button class="btn-secondary text-lg" onclick="window.location.href='contact.html'">
+                                <img src="https://api.iconify.design/heroicons/chat-bubble-left-right.svg?color=%231A1A1A" alt="Contact icon" class="w-5 h-5 mr-2">
+                                Ask Question
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('serviceModal').classList.remove('hidden');
+        }
+
+        function closeServiceModal() {
+            document.getElementById('serviceModal').classList.add('hidden');
+        }
+
+        // Search Handler
+        function handleSearch(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            filteredServices = servicesData.filter(service =>
+                service.name.toLowerCase().includes(searchTerm) ||
+                service.description.toLowerCase().includes(searchTerm) ||
+                service.category.toLowerCase().includes(searchTerm)
+            );
+
+            if (currentCategory !== 'all') {
+                filteredServices = filteredServices.filter(s => s.category === currentCategory);
+            }
+
+            renderServices(filteredServices);
+        }
+
+        // Category Change Handler
+        function handleCategoryChange(pill) {
+            document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+
+            currentCategory = pill.dataset.category;
+
+            if (currentCategory === 'all') {
+                filteredServices = [...servicesData];
+            } else {
+                filteredServices = servicesData.filter(s => s.category === currentCategory);
+            }
+
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            if (searchTerm) {
+                filteredServices = filteredServices.filter(service =>
+                    service.name.toLowerCase().includes(searchTerm) ||
+                    service.description.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            renderServices(filteredServices);
+        }
+
+        // Filter Modal Functions
+        function closeFilterModal() {
+            document.getElementById('filterModal').classList.add('hidden');
+        }
+
+        function applyFilters() {
+            const minPrice = parseInt(document.getElementById('minPrice').value) || 0;
+            const maxPrice = parseInt(document.getElementById('maxPrice').value) || 999999;
+
+            const selectedDurations = Array.from(document.querySelectorAll('.duration-filter:checked')).map(cb => parseInt(cb.value));
+            const selectedExperience = Array.from(document.querySelectorAll('.experience-filter:checked')).map(cb => cb.value);
+
+            filteredServices = servicesData.filter(service => {
+                const priceMatch = service.price >= minPrice && service.price <= maxPrice;
+                const durationMatch = selectedDurations.length === 0 || selectedDurations.some(d => service.duration <= d);
+                const experienceMatch = selectedExperience.length === 0 || selectedExperience.includes(service.experience);
+                const categoryMatch = currentCategory === 'all' || service.category === currentCategory;
+
+                return priceMatch && durationMatch && experienceMatch && categoryMatch;
+            });
+
+            renderServices(filteredServices);
+            closeFilterModal();
+        }
+
+        function clearFilters() {
+            document.getElementById('minPrice').value = '';
+            document.getElementById('maxPrice').value = '';
+            document.querySelectorAll('.duration-filter, .experience-filter').forEach(cb => cb.checked = false);
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            clearFilters();
+            currentCategory = 'all';
+            document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
+            document.querySelector('.category-pill[data-category="all"]').classList.add('active');
+            filteredServices = [...servicesData];
+            renderServices(filteredServices);
+        }
+
+        // Sort Handler
+        function handleSort(e) {
+            const sortBy = e.target.value;
+
+            switch (sortBy) {
+                case 'popular':
+                    filteredServices.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0) || b.reviews - a.reviews);
+                    break;
+                case 'price-low':
+                    filteredServices.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-high':
+                    filteredServices.sort((a, b) => b.price - a.price);
+                    break;
+                case 'duration':
+                    filteredServices.sort((a, b) => a.duration - b.duration);
+                    break;
+                case 'rating':
+                    filteredServices.sort((a, b) => b.rating - a.rating);
+                    break;
+            }
+
+            renderServices(filteredServices);
+        }
+
+        // Cart Functions
+        function addToCart(serviceId) {
+            const service = servicesData.find(s => s.id === serviceId);
+            if (!service) return;
+
+            const existingItem = cart.find(item => item.id === serviceId);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    ...service,
+                    quantity: 1
+                });
+            }
+
+            localStorage.setItem('glowoncall_cart', JSON.stringify(cart));
+            updateCartCount();
+            renderServices(filteredServices); // Re-render to update counters
+
+            // Show success message
+            showToast('Service added to cart!');
+        }
+
+        function removeFromCart(serviceId) {
+            const index = cart.findIndex(item => item.id === serviceId);
+            if (index === -1) return;
+
+            if (cart[index].quantity > 1) {
+                cart[index].quantity -= 1;
+            } else {
+                cart.splice(index, 1);
+            }
+
+            localStorage.setItem('glowoncall_cart', JSON.stringify(cart));
+            updateCartCount();
+            renderServices(filteredServices);
+            showToast('Item updated in cart');
+        }
+
+        function addComboToCart(comboId) {
+            const combos = {
+                combo1: {
+                    name: 'Day of Radiance',
+                    price: 2999,
+                    services: [
+                        'Gold Illumination Facial',
+                        'Full Arms + Underarms Wax',
+                        'Luxury Pedicure',
+                        'Head & Shoulder Massage'
+                    ],
+                    image: '../assets/combo/Day of Radiance.png'
+                },
+                combo2: {
+                    name: 'Quick Glow Makeover',
+                    price: 1499,
+                    services: [
+                        'Classic Radiance Facial',
+                        'Full Arms Wax',
+                        'Underarm Wax',
+                        'Express Manicure'
+                    ],
+                    image: '../assets/combo/Quick Glow Makeover.png'
+                },
+                combo3: {
+                    name: 'Hair & Scalp Revival',
+                    price: 2499,
+                    services: [
+                        'Signature Hair Spa',
+                        'Anti-Hairfall Therapy',
+                        'Head & Shoulder Massage'
+                    ],
+                    image: '../assets/combo/Hair & Scalp Revival.png'
+                }
+            };
+
+            const combo = combos[comboId];
+            if (!combo) return;
+
+            cart.push({
+                id: comboId,
+                name: combo.name,
+                price: combo.price,
+                quantity: 1,
+                isCombo: true,
+                services: combo.services
+            });
+
+            localStorage.setItem('glowoncall_cart', JSON.stringify(cart));
+            updateCartCount();
+            showToast('Combo package added to cart!');
+        }
+
+        function updateCartCount() {
+            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            document.getElementById('cartCount').textContent = count;
+
+            // Update sticky cart
+            const stickyCart = document.getElementById('stickyCart');
+            if (count > 0) {
+                stickyCart.classList.remove('hidden');
+                document.getElementById('stickyTotal').textContent = total.toLocaleString('en-IN');
+                document.getElementById('stickyCount').textContent = count;
+            } else {
+                stickyCart.classList.add('hidden');
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-24 right-6 bg-accent text-white px-6 py-3 rounded-lg shadow-modal z-fixed animate-fade-in-up';
+            toast.innerHTML = `
+                <div class="flex items-center space-x-2">
+                    <img src="https://api.iconify.design/heroicons/check-circle-solid.svg?color=%23FFFFFF" alt="Success icon" class="w-5 h-5">
+                    <span class="font-semibold">${message}</span>
+                </div>
+            `;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+    </script>
+    <!-- Sticky Bottom Cart (Mobile) -->
+    <div id="stickyCart" class="sticky-cart hidden md:hidden">
+        <div class="cart-price">
+            <div class="text-white bg-green-700 px-2 py-0.5 rounded text-[10px] w-fit mb-1 font-bold">₹165 saved as a
+                plus member</div>
+            <div class="flex items-center space-x-2">
+                <span class="text-secondary font-bold text-lg">₹<span id="stickyTotal">0</span></span>
+                <span class="text-xs text-text-secondary">| <span id="stickyCount">0</span> items</span>
+            </div>
+        </div>
+        <button class="btn-view-cart flex items-center" onclick="window.location.href='cart.html'">
+            View cart
+            <img src="https://api.iconify.design/heroicons/chevron-right.svg?color=%23FFFFFF" class="w-4 h-4 ml-1">
+        </button>
+    </div>
+
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>
