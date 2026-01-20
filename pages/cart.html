@@ -296,10 +296,9 @@
                                 </div>
                                 <div class="bg-accent/10 rounded-lg p-3">
                                     <div class="flex items-center justify-between text-sm">
-                                        <span class="text-secondary font-medium">Advance Payment (30%)</span>
-                                        <span class="font-bold text-accent price-summary-advance">₹0</span>
+                                        <span class="text-secondary font-medium">Pay After Service Only</span>
                                     </div>
-                                    <p class="text-xs text-text-secondary mt-1">Remaining payable after service</p>
+                                    <p class="text-xs text-text-secondary mt-1">No advance required. Payment is due after your service is completed.</p>
                                 </div>
                             </div>
 
@@ -712,14 +711,12 @@
             const discountEl = document.querySelector('.price-summary-discount');
             const travelEl = document.querySelector('.price-summary-travel');
             const totalEl = document.querySelector('.price-summary-total');
-            const advanceEl = document.querySelector('.price-summary-advance');
             const itemsCountEl = document.querySelector('.price-summary-items');
             // Update values
             if (subtotalEl) subtotalEl.textContent = `₹${subtotal}`;
             if (discountEl) discountEl.textContent = `-₹${discount}`;
             if (travelEl) travelEl.textContent = `₹${travel}`;
             if (totalEl) totalEl.textContent = `₹${subtotal - discount + travel}`;
-            if (advanceEl) advanceEl.textContent = `₹${Math.round((subtotal - discount + travel) * 0.3)}`;
             if (itemsCountEl) itemsCountEl.textContent = `(${getCartCount()} items)`;
         }
 
@@ -947,7 +944,6 @@
                     cart.forEach(item => {
                         totalAmount += (item.price || 0) * (item.quantity || 1);
                     });
-                    const advanceAmount = Math.round(totalAmount * 0.3);
 
                     // Build service details
                     let servicesText = '';
@@ -970,7 +966,7 @@
 📋 Service Details:
 ${servicesText}
 💰 Total Amount: ₹${totalAmount}
-💳 Advance Payment (30%): ₹${advanceAmount}
+💵 Payment: Pay after service only
 
 📅 Appointment Details:
 Date: ${date}
